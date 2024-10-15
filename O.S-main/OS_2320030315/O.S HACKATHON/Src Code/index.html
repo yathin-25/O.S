@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulation </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon-16x16.ico">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div class="heading">
+        <h1>CPU Scheduling Simulator</h1>
+    </div>
+ 
+
+        <div class="input-section">
+            
+            <h2>Enter Number of Processes</h2>
+           
+            <div class="input-row">
+                <label for="numProcesses">Number of Processes:</label>
+                <div class="noofprocess">
+                <input type="number" id="numProcesses" placeholder="Number of Processes"></div>
+                <button id="generateInputs">Generate Input Fields</button>
+            </div>
+        </div>
+
+        <div id="processInputSection" class="input-section"></div>
+
+        <div class="input-row">
+            <label for="algorithm">Choose Algorithm:</label>
+            <select id="algorithm">
+                <option value="fcfs">First Come First Serve (FCFS)</option>
+                <option value="sjf">Shortest Job First (Non-preemptive)</option>
+                <option value="sjf-preemptive">Shortest Job First (Preemptive)</option>
+                <option value="priority">Priority Scheduling</option>
+                <option value="roundrobin">Round Robin</option>
+            </select>
+        </div>
+
+        <div class="input-row" id="quantumInput">
+            <label for="quantum">Time Quantum (for Round Robin):</label>
+            <input type="number" id="quantum" placeholder="Time Quantum">
+        </div>
+        
+        <button id="simulate">Simulate</button>
+
+        <div class="output-section">
+            <h2>Gantt Chart</h2>
+            <div id="ganttChart" class="gantt"></div>
+
+            <h3>Performance Metrics</h3>
+            <p id="metrics"></p>
+        </div>
+    </div>
+    <footer>
+        <p><h1>&copy Operating System </h1></p>
+    </footer>
+    
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
